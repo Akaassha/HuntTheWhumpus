@@ -9,8 +9,11 @@ public:
 		return instance;
 	}
 
-	class Map* map;
-	class Player* player;
+	void init();
+	void (*game_loop)() = nullptr;
+
+	class Map* map = nullptr;
+	class Player* player = nullptr;
 
 private:
 	Game() {};

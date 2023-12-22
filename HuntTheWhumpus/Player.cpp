@@ -3,5 +3,6 @@
 
 void Player::draw() 
 {
+	Actor::draw();
 	std::cout << '(' << ')';
 }

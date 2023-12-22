@@ -4,7 +4,8 @@
 #include <fstream>
 #include <iostream>
 #include <Windows.h>
-
+#include "Game.h"
+#include "Player.h"
 
 
 Map::Map(std::string filename)
@@ -50,6 +51,11 @@ void Map::draw()
 const Tile& Map::getTile(int x, int y)
 {
 	return Tiles[y][x];
+}
+
+const Tile& Map::getTile(vector2D vec)
+{
+	return getTile(vec.x, vec.y);
 }
 
 std::vector<std::string> Map::read_map(std::string filename)
@@ -99,4 +105,12 @@ void Map::redraw()
 
 	SetConsoleTextAttribute(hOut, 0);
 
+}
+
+void Map::init()
+{
+	Game& game = Game::GetGame();
+	Player* player = game.player;
+	player->SetLocation(PlayerSpawnLoc);
+	Actors.push_back(player);
 }

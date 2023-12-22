@@ -1,4 +1,5 @@
 #pragma once
+
 #include <string>
 #include <vector>
 #include "vector2D.h">
@@ -15,11 +16,14 @@ class Map
 public:
 	Map(std::string filename);
 
+	void init();
 	void draw();
 	void redraw();
-	inline const Tile& getTile(int x, int y);
+	 const Tile& getTile(int x, int y);
+	 const Tile& getTile(vector2D loc);
 
 	void AddActor(class Actor* actor) { Actors.push_back(actor); };
+	std::vector<class Actor*> GetActors() { return Actors; };
 
 	vector2D GetPlayerSpawnLoc() { return PlayerSpawnLoc; };
 private:

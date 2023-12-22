@@ -12,6 +12,7 @@ struct vector2D
 
 	vector2D operator+(vector2D B) { return vector2D( x += B.x, y += B.y ); };
 	vector2D operator-(vector2D B) { return vector2D( x -= B.x, y -= B.y ); };
+	vector2D operator*(int a) { return vector2D(x * a, y * a); };
 	bool operator==(vector2D B) { if (x == B.x && y == B.y) return true; else return false; };
 	bool operator!=(vector2D B) { return !operator==(B); };
 
