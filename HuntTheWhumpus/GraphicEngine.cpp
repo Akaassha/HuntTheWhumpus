@@ -43,7 +43,7 @@ void GraphicEngine::run()
 			actor->tick();
 			coords.Y = -1;
 			SetConsoleCursorPosition(console, coords);
-			Sleep(100);
+			Sleep(50);
 		}
 	}
 }

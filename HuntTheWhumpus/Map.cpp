@@ -114,3 +114,12 @@ void Map::init()
 	player->SetLocation(PlayerSpawnLoc);
 	Actors.push_back(player);
 }
+
+void Map::RemoveActor(class Actor* actorToDelete)
+{
+	for (int i = 0; i<Actors.size(); ++i)
+	{
+		if (actorToDelete == Actors[i])
+			Actors.erase(Actors.begin()+i);
+	}
+}

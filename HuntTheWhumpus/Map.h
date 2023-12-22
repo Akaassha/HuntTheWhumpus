@@ -19,10 +19,11 @@ public:
 	void init();
 	void draw();
 	void redraw();
-	 const Tile& getTile(int x, int y);
-	 const Tile& getTile(vector2D loc);
+	const Tile& getTile(int x, int y);
+	const Tile& getTile(vector2D loc);
 
 	void AddActor(class Actor* actor) { Actors.push_back(actor); };
+	void RemoveActor(class Actor* actor);
 	std::vector<class Actor*> GetActors() { return Actors; };
 
 	vector2D GetPlayerSpawnLoc() { return PlayerSpawnLoc; };

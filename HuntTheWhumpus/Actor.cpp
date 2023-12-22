@@ -32,6 +32,15 @@ void Actor::move(Direction direction, int distant)
 
 }
 
+Actor::~Actor()
+{
+	Game& game = Game::GetGame();
+	GraphicEngine& graphicEngine = GraphicEngine::GetEngine();
+	graphicEngine.redrawTile(GetLocation());
+	game.map->RemoveActor(this);
+
+}
+
 void Actor::draw()
 {
 	
@@ -39,8 +48,6 @@ void Actor::draw()
 
 void Actor::tick()
 {
-	
-
 	draw();
 
 	if (locLastFrame != GetLocation());

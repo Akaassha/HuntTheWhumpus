@@ -31,6 +31,8 @@ void game_loop()
 		case 'd':
 			player->move(Actor::Direction::right, 1);
 			break;
+		case ' ':
+			player->shot();
 		}
 		Sleep(100);
 

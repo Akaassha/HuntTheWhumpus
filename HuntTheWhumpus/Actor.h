@@ -4,8 +4,9 @@
 class Actor
 {
 	vector2D loc;
-	vector2D locLastFrame = vector2D{ 0, 0 };
+	
 public:
+	virtual ~Actor();
 	enum class Direction
 	{
 		up,
@@ -21,7 +22,8 @@ public:
 	void SetLocation(const vector2D loc) { this->loc = loc; };
 	vector2D GetLocation() { return loc; };
 
-private:
+protected:
 	bool canMove(Direction direction, int distant);
+	vector2D locLastFrame = vector2D{ 0, 0 };
 };
 
