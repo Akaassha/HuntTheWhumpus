@@ -10,7 +10,6 @@ void graphic_loop()
 {
 	GraphicEngine& graphicEngine = GraphicEngine::GetEngine();
 	graphicEngine.run();
-	
 }
 
 GraphicEngine::GraphicEngine()

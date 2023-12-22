@@ -15,6 +15,7 @@ void game_loop()
 	char input = 0;
 	while (1)
 	{
+		FlushConsoleInputBuffer(GetStdHandle(STD_INPUT_HANDLE));
 		input = _getch();
 		switch (input)
 		{

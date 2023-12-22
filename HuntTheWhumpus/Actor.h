@@ -21,5 +21,7 @@ public:
 	void SetLocation(const vector2D loc) { this->loc = loc; };
 	vector2D GetLocation() { return loc; };
 
+private:
+	bool canMove(Direction direction, int distant);
 };
 
