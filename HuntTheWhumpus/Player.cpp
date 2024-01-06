@@ -4,12 +4,6 @@
 #include "Map.h"
 #include <iostream>
 
-void Player::draw() 
-{
-	Actor::draw();
-	std::cout << '(' << ')';
-}
-
 void Player::shot()
 {
 	vector2D diff = GetLocation() - locLastFrame;
@@ -23,8 +17,8 @@ void Player::shot()
 	if (diff.x == -1 && diff.y == 0)
 		direct = Direction::left;
 
-
-	Game& game = Game::GetGame();
+	//Make spawn Actor Function
+	Game& game = Game::GetInstance();
 	Arrow* arrow = new Arrow(direct);
 	arrow->SetLocation(GetLocation() + diff);
 	game.map->AddActor(arrow);

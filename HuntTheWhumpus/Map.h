@@ -6,6 +6,7 @@
 
 class Map
 {
+	friend class GraphicEngine;
 	class Tile** Tiles;
 	std::vector<class Actor*> Actors;
 	int width;

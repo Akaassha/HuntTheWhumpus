@@ -6,7 +6,7 @@
 
 void Game::init()
 {
-	GraphicEngine& graphicEngine = GraphicEngine::GetEngine();
+	GraphicEngine& graphicEngine = GraphicEngine::GetInstance();
 	graphicEngine.SetMap(map);
 	map->init();
 

@@ -8,7 +8,7 @@
 
 void graphic_loop()
 {
-	GraphicEngine& graphicEngine = GraphicEngine::GetEngine();
+	GraphicEngine& graphicEngine = GraphicEngine::GetInstance();
 	graphicEngine.run();
 }
 

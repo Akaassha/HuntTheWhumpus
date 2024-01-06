@@ -3,9 +3,9 @@
 
 class Player : public Actor
 {
-	virtual void draw() override;
 
 public:
+	Player() { apperance.first = '('; apperance.second = ')'; };
 	void shot();
 };
 

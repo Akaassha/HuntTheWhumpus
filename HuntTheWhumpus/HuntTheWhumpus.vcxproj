@@ -134,6 +134,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Singleton.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="vector2D.cpp" />
   </ItemGroup>
@@ -144,6 +145,7 @@
     <ClInclude Include="GraphicEngine.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Singleton.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="vector2D.h" />
   </ItemGroup>

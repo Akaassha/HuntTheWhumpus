@@ -34,8 +34,8 @@ void Actor::move(Direction direction, int distant)
 
 Actor::~Actor()
 {
-	Game& game = Game::GetGame();
-	GraphicEngine& graphicEngine = GraphicEngine::GetEngine();
+	Game& game = Game::GetInstance();
+	GraphicEngine& graphicEngine = GraphicEngine::GetInstance();
 	graphicEngine.redrawTile(GetLocation());
 	game.map->RemoveActor(this);
 
@@ -43,7 +43,7 @@ Actor::~Actor()
 
 void Actor::draw()
 {
-	
+	std::cout << apperance.first << apperance.second;
 }
 
 void Actor::tick()
@@ -52,7 +52,7 @@ void Actor::tick()
 
 	if (locLastFrame != GetLocation());
 	{
-		GraphicEngine& graphicEngine = GraphicEngine::GetEngine();
+		GraphicEngine& graphicEngine = GraphicEngine::GetInstance();
 		graphicEngine.redrawTile(locLastFrame);
 	}
 
@@ -60,7 +60,7 @@ void Actor::tick()
 
 bool Actor::canMove(Direction direction, int distant)
 {
-	Game& game = Game::GetGame();
+	Game& game = Game::GetInstance();
 	
 	vector2D loc;
 	switch (direction)

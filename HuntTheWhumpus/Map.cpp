@@ -109,7 +109,7 @@ void Map::redraw()
 
 void Map::init()
 {
-	Game& game = Game::GetGame();
+	Game& game = Game::GetInstance();
 	Player* player = game.player;
 	player->SetLocation(PlayerSpawnLoc);
 	Actors.push_back(player);

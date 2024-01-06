@@ -1,5 +1,6 @@
 #pragma once
 #include "vector2D.h"
+#include <utility>
 
 class Actor
 {
@@ -15,6 +16,8 @@ public:
 		right
 	};
 	
+	std::pair<char, char> apperance;
+
 	virtual void draw();
 	virtual void tick();
 	virtual void move(Direction direction, int distant);
